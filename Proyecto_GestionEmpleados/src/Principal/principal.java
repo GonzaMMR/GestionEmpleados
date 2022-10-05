@@ -25,8 +25,8 @@ public class principal {
     
     public static void main(String[] args) {
         Empleado formulario [] = new Empleado[2];
-        Empleado e1 = new Empleado("gonzalo","moraño");
-        Empleado e2 = new Empleado("niko","beltreke");
+        Empleado e1 = new Empleado("gonzalo","moraño") {};
+        Empleado e2 = new Empleado("niko","beltreke") {};
         
         /*
         //crear una apersona
@@ -64,10 +64,10 @@ public class principal {
         
     Integer numeros[]={12,2,43};
        
-        Persona e1 = new Empleado("Loken","swift");
-        Persona e2 = new Empleado("LUIS","morado");
-        Persona e3 = new Empleado("Loken","swift");
-        Persona e4 = new Empleado("LUIS","morado");
+        Persona e1 = new Empleado("Loken","swift") {};
+        Persona e2 = new Empleado("LUIS","morado") {};
+        Persona e3 = new Empleado("Loken","swift") {};
+        Persona e4 = new Empleado("LUIS","morado") {};
         
         Persona empleado[]= {e1,e2};
         

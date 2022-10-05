@@ -9,16 +9,27 @@ package Domino;
  *
  * @author Alumno Mañana
  */
-public class Empleado extends Persona{
+public abstract class Empleado extends Persona{
 
+    private int NumSS;
+    private double salario;
+    
     public Empleado(String nombre, String apellido) {
         super(nombre, apellido);
     }
+    
+    
 
    /* @Override
     public final void imprimir(){
         System.out.println("imprimiendo desde la clase padre ...");
     }*/
+
+    public Empleado(int NumSS, double salario, String nombre, String apellido) {
+        super(nombre, apellido);
+        this.NumSS = NumSS;
+        this.salario = salario;
+    }
     
     
 }
