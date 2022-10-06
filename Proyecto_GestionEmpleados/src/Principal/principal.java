@@ -65,6 +65,7 @@ public class principal {
         //imprimirNumeros(3, 7);
 
         mostrarDetalles(p1);
+        mostrarDetalles(g1);
     }
     
     
@@ -126,9 +127,11 @@ public class principal {
         }
         if (persona instanceof Empleado) {
             System.out.println("Es una instancia de empleado");
+            System.out.println(((Empleado) persona).getNumSS());
         }
         if (persona instanceof Gerente) {
             System.out.println("Es una instancia de Gerente");
+            System.out.println(((Gerente) persona).getDepartamento());
         }
     }
     

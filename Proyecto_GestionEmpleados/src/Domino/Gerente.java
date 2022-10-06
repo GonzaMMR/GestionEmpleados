@@ -20,5 +20,14 @@ public class Gerente extends Empleado{
         this.estudios = estudios;
         this.departamento = departamento;
     }
+
+    public int getEstudios() {
+        return estudios;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+    
     
 }

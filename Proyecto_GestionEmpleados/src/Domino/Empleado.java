@@ -30,5 +30,14 @@ public abstract class Empleado extends Persona{
         this.NumSS = NumSS;
         this.salario = salario;
     }
+
+    public int getNumSS() {
+        return NumSS;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+    
     
 }
