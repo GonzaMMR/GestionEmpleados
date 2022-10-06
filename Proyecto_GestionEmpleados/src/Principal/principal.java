@@ -6,6 +6,7 @@
 package Principal;
 
 import Domino.Empleado;
+import Domino.Gerente;
 import Domino.Persona;
 import java.util.Scanner;
 
@@ -25,8 +26,15 @@ public class principal {
     
     public static void main(String[] args) {
         Empleado formulario [] = new Empleado[2];
+        
+        //persona
+        Persona p1 = new Persona("Luis", "Fernandez");
+        //empleado
         Empleado e1 = new Empleado("gonzalo","moraño") {};
         Empleado e2 = new Empleado("niko","beltreke") {};
+        Empleado e3 = new Empleado(56, 1500.65,  "Wini", "Gonzalez") {};
+        //gerente
+        Gerente g1 = new Gerente(5, "Recursos", 25587, 2000.56, "Ruben", "perez");
         
         /*
         //crear una apersona
@@ -43,19 +51,20 @@ public class principal {
         formulario[1]=e2;
         
         for (int i = 0; i < formulario.length; i++) {
-            System.out.println(formulario[i]);
+            //System.out.println(formulario[i]);
         }
         
         System.out.println("\n\n====================\n\n");
         System.out.println("matriz de personas");
-        matriz_de_personas();
+        //matriz_de_personas();
         
         //imprimiendo numeros con variables
         System.out.println("Primera llamada con 3 argumentos: ");
-        imprimirNumeros(1, 2, 4);
+        //imprimirNumeros(1, 2, 4);
         System.out.println("Segunda llamada con 2 argumentos: ");
-        imprimirNumeros(3, 7);
+        //imprimirNumeros(3, 7);
 
+        mostrarDetalles(p1);
     }
     
     
@@ -107,6 +116,19 @@ public class principal {
     public static void imprimirNumeros( int... numeros){
         for (int i = 0; i < numeros.length; i++) {
             System.out.println("Numero = " + i + "] = " +numeros[i]);
+        }
+    }
+    
+    
+        public static void mostrarDetalles(Persona persona){
+        if(persona instanceof Persona){
+            System.out.println("Es una instancia de persona");
+        }
+        if (persona instanceof Empleado) {
+            System.out.println("Es una instancia de empleado");
+        }
+        if (persona instanceof Gerente) {
+            System.out.println("Es una instancia de Gerente");
         }
     }
     

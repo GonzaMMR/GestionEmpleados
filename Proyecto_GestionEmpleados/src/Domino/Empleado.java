@@ -31,5 +31,4 @@ public abstract class Empleado extends Persona{
         this.salario = salario;
     }
     
-    
 }
