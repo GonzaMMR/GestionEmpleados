@@ -8,6 +8,11 @@ package Principal;
 import Domino.Empleado;
 import Domino.Gerente;
 import Domino.Persona;
+
+import com.empresa.accesoaDatos.IAcessoaDatos;
+import com.empresa.accesoaDatos.ImplMongo;
+import com.empresa.accesoaDatos.ImplMysl;
+
 import java.util.Scanner;
 
 /**
@@ -64,8 +69,20 @@ public class principal {
         System.out.println("Segunda llamada con 2 argumentos: ");
         //imprimirNumeros(3, 7);
 
-        mostrarDetalles(p1);
-        mostrarDetalles(g1);
+        //mostrarDetalles(p1);
+        //mostrarDetalles(g1);
+        
+        
+        //Instancion de la interfaz con la impl Mysql
+        IAcessoaDatos datosMysql = new ImplMysl();
+        
+        //Instancion de la interfaz con la impl mongo
+        IAcessoaDatos datosMongo = new ImplMongo();
+        
+        datosMysql.listar();
+        datosMongo.listar();
+        
+        imprimirDatos(datosMongo);
     }
     
     
@@ -135,4 +152,8 @@ public class principal {
         }
     }
     
+        public static void imprimirDatos(IAcessoaDatos datos){
+            datos.listar();
+        }
+        
 }
